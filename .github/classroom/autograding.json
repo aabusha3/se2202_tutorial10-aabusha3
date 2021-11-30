@@ -1,0 +1,14 @@
+{
+  "tests": [
+    {
+      "name": "Tutorial10_Test",
+      "setup": "",
+      "run": "node shapesTest.js",
+      "input": "",
+      "output": "Shape with main point at: 5,10\r\nSquare Shape with main point at: 10,20\r\nTriangle Shape with main point at: 20,30\r\nShape with main point at: 5,6\r\nSquare Shape with main point at: 7,10\r\nTriangle Shape with main point at: 8,9",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 10
+    }
+  ]
+}
