@@ -1,17 +1,15 @@
-class Square extends Shape
-{
-    constructor(x,y,newLength)
-    {
-        super(x,y);
+const Shape = require('./Shape');
+
+class Square extends Shape {
+    constructor(x, y, newLength) {
+        super(x, y);
 
         var __length__;
 
-        this.setLength = function (length)
-        {
-            __length__ = (length > 0)? length : 1;
+        this.setLength = function(length) {
+            __length__ = (length > 0) ? length : 1;
         };
-        this.getLength = function()
-        {
+        this.getLength = function() {
             return __length__;
         };
 
@@ -33,9 +31,10 @@ class Square extends Shape
         console.log(square);
     }
 
-    displayInfo()
-    {
+    displayInfo() {
         return "Square " + super.displayInfo();
     }
 
 };
+
+module.exports = Square;

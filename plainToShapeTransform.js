@@ -1,21 +1,24 @@
-let transformPlainObjectsToShapes = function (data)
-{
+const Shape = require('./Shape');
+const Square = require('./Square');
+const Triangle = require('./Triangle');
+
+let transformPlainObjectsToShapes = function(data) {
     let shapes = [];
     let s;
-    for (let d of data)
-    {
-        switch(d.type)
-        {
-        case undefined:
-            s = new Shape(d.x,d.y);
-            break;
-        case "Square":
-            s = new Square(d.x,d.y,d.length);
-            break;
-        case "Triangle":
-            s = new Triangle(d.x,d.y,d.height);
+    for (let d of data) {
+        switch (d.type) {
+            case undefined:
+                s = new Shape(d.x, d.y);
+                break;
+            case "Square":
+                s = new Square(d.x, d.y, d.length);
+                break;
+            case "Triangle":
+                s = new Triangle(d.x, d.y, d.height);
         }
         shapes.push(s);
     }
     return shapes;
 };
+
+module.exports = transformPlainObjectsToShapes;
